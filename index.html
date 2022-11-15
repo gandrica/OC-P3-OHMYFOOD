@@ -10,7 +10,7 @@
         <title>ohmyfood</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./public/css/prefixed/style.css">
+        <link rel="stylesheet" href="./public/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -22,7 +22,7 @@
         <header class="header">
             <div class="logo"> 
                 <svg class="logo__img">
-                    <use xlink:href="public/img/logo/ohmyfood@2x.svg#logo"></use>
+                    <use href="./public/img/logo/ohmyfood@2x.svg#logo"></use>
                 </svg>
             </div>
         </header>
@@ -110,20 +110,21 @@
         <footer class="footer">
             <div class="footer__logo-box">
                 <svg class="footer__logo">
-                    <use xlink:href="public/img/logo/ohmyfood@2x.svg#logo"></use>
+                    <use href="./public/img/logo/ohmyfood@2x.svg#logo"></use>
                 </svg>
+                <!-- <img src="./public/img/logo/ohmyfood@2x.svg" alt="logo" class="footer__logo"> -->
             </div>
             <ul class="footer__list">
                 <li class="footer__item">
-                    <i class="fa-solid fa-utensils footer__item-icon"></i>
+                    <i class="fa-solid fa-utensils footer__item-icon footer__item-icon--1"></i>
                     <a href="#" class="footer__link">Proposer un restaurant</a>
                 </li>
                 <li class="footer__item">
-                    <i class="fa-solid fa-handshake-angle footer__item-icon"></i>
+                    <i class="fa-solid fa-handshake-angle footer__item-icon footer__item-icon--2"></i>
                     <a href="#" class="footer__link">Devenir partenaire</a>
                 </li>
                 <li class="footer__item"><a href="#" class="footer__link">Mentions legales</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
+                <li class="footer__item"><a href="mailto:ga@gmail.com" class="footer__link">Contact</a></li>
             </ul>
         </footer>
     </body>

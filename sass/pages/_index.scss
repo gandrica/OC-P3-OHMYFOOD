@@ -1,19 +1,15 @@
 .top-section{
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center-element;
     flex-direction: column;
-    background-color: rgba(244, 244, 244, 0.8);
+    background-color: $color-secondary-light;
     z-index: 1;
 }
 
 .location {
     width: 100%;
     height: 4.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center-element;
     color: $color-black;
     background: linear-gradient(rgba(0, 0, 0, 0.05),
                 rgba(0, 0, 0, 0.05));
@@ -34,10 +30,8 @@
     width: 80%;
     margin-left:auto;
     margin-right: auto;
-    display: flex;
+    @include center-element;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 3.4rem 2rem 4rem 2rem;
 
     &__heading{
@@ -47,9 +41,67 @@
 
     &__text{
         font-size: 1.5rem;
-        color: rgb(94, 89, 89);
+        color: $color-grey-dark-1;
         margin-bottom: 2.4rem;
         text-align: center;
     }
+}
+
+.navigation {
+    width: 100%;
+    padding: 4rem 2rem;
+
+    &__list{
+        list-style: none;
+        margin-top: 2rem;
+        @include center-element;
+        flex-direction: column;
+    }
+
+    &__item{
+        width: 96%;
+        height: 6rem;
+        background-color: $color-secondary-light;
+        margin-bottom: 1.6rem;
+        border-radius: 1.4rem;
+        @include center-element;
+        justify-content: flex-start;
+
+        &:hover{
+            background-color: $secondary-color-light-2;
+        }
+
+        &:hover &-icon {
+            color: $primary-color;
+        }
+    }
+
+    &__circle{
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+        background-color: $primary-color;
+        color: $color-white;
+        @include center-element;
+        font-size: 1.3rem;
+        transform: translateX(-50%);
+    }
+
+    &__icon{
+        font-size: 1.6rem;
+        color: $color-grey-dark-1;
+        margin-left: 1rem;
+    }
+
+    &__text{
+        font-size: 1.5rem;
+        color: $color-black;
+        font-weight: 900;
+        margin-left: 2rem;
+    }
+}
+
+.restaurants{
+    padding: 4rem 2rem;
 }
 

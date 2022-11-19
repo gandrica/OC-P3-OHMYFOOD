@@ -33,74 +33,81 @@
     </header>
     <main>
         <section class="th-section">
-            <div class="th-section__img"></div>
-            <div class="th-section__heading">
-                <h1 class="heading--1">Le délice des sens</h1>
-                <i class="fa-regular fa-heart"></i>
+            <div class="th-section__img-box">
+                <img src="./../img/restaurants/restaurant_4.jpg" class="th-section__img"></img>
             </div>
         </section>
 
-        <section class="menu entrees">
-            <h3 class="heading--3">Entrées</h3>
-            <ul class="items__list">
-                <li class="item">
-                    <h4 class="item__name heading--4">Tartare de thon</h4>
-                    <p class="item__description">Assaisonné au yuzu</p>
-                    <p class="item_price">25€</p>
-                </li>
-                <li class="item">
-                    <h4 class="item__name heading--4">Bouchée de homard croustillant</h4>
-                    <p class="item__description">Et sa farandole de petits légumes</p>
-                    <p class="item_price">35€</p>
-                </li>
-                <li class="item">
-                    <h4 class="item__name heading--4">Velouté de cèpes</h4>
-                    <p class="item__description">Aux truffes</p>
-                    <p class="item_price">20€</p>
-                </li>
-            </ul>
-        </section>
-        <section class="menu plats">
-            <h3 class="heading--3">Plats</h3>
-            <ul class="items__list">
-                <li class="item">
-                    <h4 class="item__name heading--4">Poulet rôti aux herbes de Provence</h4>
-                    <p class="item__description">Et sa crème de truffe</p>
-                    <p class="item_price">40€</p>
-                </li>
-                <li class="item">
-                    <h4 class="item__name heading--4">Langouste rôtie</h4>
-                    <p class="item__description">Et ses légumes de saison</p>
-                    <p class="item_price">35€</p>
-                </li>
-                <li class="item">
-                    <h4 class="item__name heading--4">Côte de boeuf Angus</h4>
-                    <p class="item__description">Et sa purée de panais</p>
-                    <p class="item_price">44€</p>
-                </li>
-            </ul>
-        </section>
-        <section class="menu desserts">
-            <h3 class="heading--3">Desserts</h3>
-            <ul class="items__list">
-                <li class="item">
-                    <h4 class="item__name heading--4">Farandole de desserts</h4>
-                    <p class="item__description">Du chef</p>
-                    <p class="item_price">18€</p>
-                </li>
-                <li class="item">
-                    <h4 class="item__name heading--4">Crème brulée</h4>
-                    <p class="item__description">Revisitée</p>
-                    <p class="item_price">22€</p>
-                </li>
-                <li class="item">
-                    <h4 class="item__name heading--4">Tiramisu</h4>
-                    <p class="item__description">À la noisette</p>
-                    <p class="item_price">23€</p>
-                </li>
-            </ul>
-        </section>
-        <button class="btn">Commander</button>
+        <div class="menu">
+            <div class="menu-name">
+                <h1 class="menu-name__heading heading--1">Le délice des sens</h1>
+                <i class="fa-regular fa-heart menu-name__icon"></i>
+            </div>
+            <section class="entrees">
+                <h3 class="heading--3">Entrées</h3>
+                <div class="border-bottom"></div>
+                <ul class="item__list">
+                    <li class="item">
+                        <h4 class="item__name heading--4">Tartare de thon</h4>
+                        <p class="item__description">Assaisonné au yuzu</p>
+                        <p class="item__price">25€</p>
+                    </li>
+                    <li class="item">
+                        <h4 class="item__name heading--4">Bouchée de homard croustillant</h4>
+                        <p class="item__description">Et sa farandole de petits légumes</p>
+                        <p class="item__price">35€</p>
+                    </li>
+                    <li class="item">
+                        <h4 class="item__name heading--4">Velouté de cèpes</h4>
+                        <p class="item__description">Aux truffes</p>
+                        <p class="item__price">20€</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="plats">
+                <h3 class="heading--3 ml-3rem">Plats</h3>
+                <div class="border-bottom ml-3rem"></div>
+                <ul class="item__list">
+                    <li class="item">
+                        <h4 class="item__name heading--4">Poulet rôti aux herbes de Provence</h4>
+                        <p class="item__description">Et sa crème de truffe</p>
+                        <p class="item__price">40€</p>
+                    </li>
+                    <li class="item">
+                        <h4 class="item__name heading--4">Langouste rôtie</h4>
+                        <p class="item__description">Et ses légumes de saison</p>
+                        <p class="item__price">35€</p>
+                    </li>
+                    <li class="item">
+                        <h4 class="item__name heading--4">Côte de boeuf Angus</h4>
+                        <p class="item__description">Et sa purée de panais</p>
+                        <p class="item__price">44€</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="desserts">
+                <h3 class="heading--3">Desserts</h3>
+                <div class="border-bottom"></div>
+                <ul class="item__list">
+                    <li class="item">
+                        <h4 class="item__name heading--4">Farandole de desserts</h4>
+                        <p class="item__description">Du chef</p>
+                        <p class="item__price">18€</p>
+                    </li>
+                    <li class="item">
+                        <h4 class="item__name heading--4">Crème brulée</h4>
+                        <p class="item__description">Revisitée</p>
+                        <p class="item__price">22€</p>
+                    </li>
+                    <li class="item">
+                        <h4 class="item__name heading--4">Tiramisu</h4>
+                        <p class="item__description">À la noisette</p>
+                        <p class="item__price">23€</p>
+                    </li>
+                </ul>
+            </section>
+            <button class="btn btn--menu">Commander</button>
+        </div>
     </main>
 
     <footer class="footer">

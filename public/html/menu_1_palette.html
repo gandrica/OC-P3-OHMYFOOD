@@ -33,74 +33,81 @@
     </header>
     <main>
         <section class="th-section">
-            <div class="th-section__img"></div>
-            <div class="th-section__heading">
-                <h1 class="heading--1">La palette du goût</h1>
-                <i class="fa-regular fa-heart"></i>
+            <div class="th-section__img-box">
+                <img src="./../img/restaurants/restaurant_1.jpg" class="th-section__img"></img>
             </div>
         </section>
-        
-        <section class="menu entrees">
-            <h3 class="heading--3">Entrées</h3>
-            <ul class="items__list">
-                <li class="item">
-                    <h4 class="item__name heading--4">Fricassée d'escargot</h4>
-                    <p class="item__description">Au piment d'Espelette</p>
-                    <p class="item_price">25€</p>
-                </li>
-                <li class="item">
-                    <h4 class="item__name heading--4">Foie gras de canard mi-cuit</h4>
-                    <p class="item__description">Et ses copeaux de truffe noire</p>
-                    <p class="item_price">35€</p>
-                </li>
-                <li class="item">
-                    <h4 class="item__name heading--4">Œuf au plat</h4>
-                    <p class="item__description">Assaisonné à la truffe sur lit de caviar</p>
-                    <p class="item_price">20€</p>
-                </li>
-            </ul>
-        </section>
-        <section class="menu plats">
-            <h3 class="heading--3">Plats</h3>
-            <ul class="items__list">
-                <li class="item">
-                    <h4 class="item__name heading--4">Filet de boeuf aux herbes</h4>
-                    <p class="item__description">Accompagné de sa ribambelle de légumes</p>
-                    <p class="item_price">40€</p>
-                </li>
-                <li class="item">
-                    <h4 class="item__name heading--4">Parmentier de queue de boeuf</h4>
-                    <p class="item__description">À la truffe noire sur sa purée de panais</p>
-                    <p class="item_price">35€</p>
-                </li>
-                <li class="item">
-                    <h4 class="item__name heading--4">Filet de turbot</h4>
-                    <p class="item__description">Aux agrumes</p>
-                    <p class="item_price">44€</p>
-                </li>
-            </ul>
-        </section>
-        <section class="menu desserts">
-            <h3 class="heading--3">Desserts</h3>
-            <ul class="items__list">
-                <li class="item">
-                    <h4 class="item__name heading--4">Paris-Brest</h4>
-                    <p class="item__description">Revisité</p>
-                    <p class="item_price">18€</p>
-                </li>
-                <li class="item">
-                    <h4 class="item__name heading--4">Macaron au chocolat d'exception</h4>
-                    <p class="item__description">Et glace à la vanille de Madagascar</p>
-                    <p class="item_price">22€</p>
-                </li>
-                <li class="item">
-                    <h4 class="item__name heading--4">Mousse au chocolat</h4>
-                    <p class="item__description">Au piment d'Espelette et à la truffe noire</p>
-                    <p class="item_price">23€</p>
-                </li>
-            </ul>
-        </section>
-        <button class="btn">Commander</button>
+            
+        <div class="menu">
+            <div class="menu-name">
+                <h1 class="menu-name__heading heading--1">La palette du goût</h1>
+                <i class="fa-regular fa-heart menu-name__icon"></i>
+            </div>
+            <section class="entrees">
+                <h3 class="heading--3">Entrées</h3>
+                <div class="border-bottom"></div>
+                <ul class="item__list">
+                    <li class="item">
+                        <h4 class="item__name heading--4">Fricassée d'escargot</h4>
+                        <p class="item__description">Au piment d'Espelette</p>
+                        <p class="item__price">25€</p>
+                    </li>
+                    <li class="item">
+                        <h4 class="item__name heading--4">Foie gras de canard mi-cuit</h4>
+                        <p class="item__description">Et ses copeaux de truffe noire</p>
+                        <p class="item__price">35€</p>
+                    </li>
+                    <li class="item">
+                        <h4 class="item__name heading--4">Œuf au plat</h4>
+                        <p class="item__description">Assaisonné à la truffe sur lit de caviar</p>
+                        <p class="item__price">20€</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="plats">
+                <h3 class="heading--3 ml-3rem">Plats</h3>
+                <div class="border-bottom ml-3rem"></div>
+                <ul class="item__list">
+                    <li class="item">
+                        <h4 class="item__name heading--4">Filet de boeuf aux herbes</h4>
+                        <p class="item__description">Accompagné de sa ribambelle de légumes</p>
+                        <p class="item__price">40€</p>
+                    </li>
+                    <li class="item">
+                        <h4 class="item__name heading--4">Parmentier de queue de boeuf</h4>
+                        <p class="item__description">À la truffe noire sur sa purée de panais</p>
+                        <p class="item__price">35€</p>
+                    </li>
+                    <li class="item">
+                        <h4 class="item__name heading--4">Filet de turbot</h4>
+                        <p class="item__description">Aux agrumes</p>
+                        <p class="item__price">44€</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="desserts">
+                <h3 class="heading--3">Desserts</h3>
+                <div class="border-bottom"></div>
+                <ul class="item__list">
+                    <li class="item">
+                        <h4 class="item__name heading--4">Paris-Brest</h4>
+                        <p class="item__description">Revisité</p>
+                        <p class="item__price">18€</p>
+                    </li>
+                    <li class="item">
+                        <h4 class="item__name heading--4">Macaron au chocolat d'exception</h4>
+                        <p class="item__description">Et glace à la vanille de Madagascar</p>
+                        <p class="item__price">22€</p>
+                    </li>
+                    <li class="item">
+                        <h4 class="item__name heading--4">Mousse au chocolat</h4>
+                        <p class="item__description">Au piment d'Espelette et à la truffe noire</p>
+                        <p class="item__price">23€</p>
+                    </li>
+                </ul>
+            </section>
+            <button class="btn btn--menu">Commander</button>
+        </div>
     </main>
 
     <footer class="footer">

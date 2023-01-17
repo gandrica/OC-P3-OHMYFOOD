@@ -14,4 +14,14 @@ html {
 
 body {
     box-sizing: border-box;
+    overflow-x: hidden;
 }
+
+// @media screen and (max-width: map-get($breakpoints, tablette)) {
+//     body {
+//         max-width: 899px;
+//     }
+// }
+// @media screen and (max-width: map-get($breakpoints, mobile)) {
+//     body{max-width: 599px;}
+// }

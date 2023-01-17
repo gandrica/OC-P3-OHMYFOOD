@@ -1,53 +1,188 @@
 //Footer
-.footer{
+.footer {
     background-color: $color-black-light;
     color: $color-white;
     display: grid;
     grid-template-rows: repeat(7, 2rem);
-    padding: 1.9rem;
-    padding-bottom: 3rem;
+    padding: map-get(map-get($footer-sizes, mobile-small), footer-padding);
 
-    &__logo-box{
+    &__logo-box {
         grid-row: 1/2;
-        width: 12rem;
-        height: 3rem;
+        width: map-get(map-get($footer-sizes, mobile-small), logo-box-width);
+        height: map-get(map-get($footer-sizes, mobile-small), logo-box-height);
         fill: $color-white;
     }
 
-    &__logo{
-        width: 9rem;
-        height: 3rem;
+    &__logo {
+        width: map-get(map-get($footer-sizes, mobile-small), logo-width);
+        height: map-get(map-get($footer-sizes, mobile-small), logo-height);
         fill: $color-white;
     }
 
-    &__list{
+    &__list {
         grid-row: 3/7;
         list-style: none;
     }
-    
-    &__item{
+
+    &__item {
         margin-top: $margin_5rem;
         margin-bottom: .7rem;
         display: grid;
         grid-template-columns: max-content max-content;
-        font-size: 1.2rem;
+        font-size: map-get(map-get($footer-sizes, mobile-small), item-font-size);
         align-items: center;
     }
 
-    &__item-icon{
-        margin-right: 1rem;
-        font-size: 1rem;
-        
-        &--1{
-            font-size: 1.1rem;
-            margin-top: -3px;
-            margin-right: 1.2rem;
+    &__item-icon {
+        margin-right: .6rem;
+        font-size: map-get(map-get($footer-sizes, mobile-small), item-icon-font-size);
+
+        &--1 {
+            font-size: map-get(map-get($footer-sizes, mobile-small), item-icon-font-size-1);
+            margin-bottom: -2px;
+            // margin-right: .8rem;
         }
     }
 
     &__link {
         color: $color-white;
         text-decoration: none;
-        font-size: 1.4rem;
+        font-size: map-get(map-get($footer-sizes, mobile-small), link-font-size);
+    }
+}
+@media screen and (min-width: map-get(map-get($footer-sizes, mobile),resolution)) {
+    .footer {
+            padding: map-get(map-get($footer-sizes, mobile), footer-padding);
+    
+            &__logo-box {
+                width: map-get(map-get($footer-sizes, mobile), logo-box-width);
+                height: map-get(map-get($footer-sizes, mobile), logo-box-height);
+            }
+    
+            &__logo {
+                width: map-get(map-get($footer-sizes, mobile), logo-width);
+                height: map-get(map-get($footer-sizes, mobile), logo-height);
+            }
+    
+            &__item {
+                font-size: map-get(map-get($footer-sizes, mobile), item-font-size);
+            }
+    
+            &__item-icon {
+                font-size: map-get(map-get($footer-sizes, mobile), item-icon-font-size);
+    
+                &--1 {
+                    font-size: map-get(map-get($footer-sizes, mobile), item-icon-font-size-1);
+                }
+            }
+    
+            &__link {
+                font-size: map-get(map-get($footer-sizes, mobile), link-font-size);
+            }
+        }
+}
+
+@media screen and (min-width: map-get(map-get($footer-sizes, tablette), resolution)) {
+    .footer {
+        grid-template-columns: repeat(2,1fr);
+        padding: map-get(map-get($footer-sizes, tablette), footer-padding);
+
+        &__logo-box {
+            grid-column: 1/2;
+            width: map-get(map-get($footer-sizes, tablette), logo-box-width);
+            height: map-get(map-get($footer-sizes, tablette), logo-box-height);
+        }
+
+        &__logo {
+            width: map-get(map-get($footer-sizes, tablette), logo-width);
+            height: map-get(map-get($footer-sizes, tablette), logo-height);
+        }
+
+        &__list {
+            grid-column: 2/3;
+            grid-row: 1/8;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        &__item {
+            font-size: map-get(map-get($footer-sizes, tablette), item-font-size);
+        }
+
+        &__item-icon {
+            font-size: map-get(map-get($footer-sizes, tablette), item-icon-font-size);
+
+            &--1 {
+                font-size: map-get(map-get($footer-sizes, tablette), item-icon-font-size-1);
+            }
+        }
+
+        &__link {
+            font-size: map-get(map-get($footer-sizes, tablette), link-font-size);
+        }
+    }
+}
+@media screen and (min-width: map-get(map-get($footer-sizes, ecran), resolution)) {
+    .footer {
+        padding: map-get(map-get($footer-sizes, ecran), footer-padding);
+
+        &__logo-box {
+            width: map-get(map-get($footer-sizes, ecran), logo-box-width);
+            height: map-get(map-get($footer-sizes, ecran), logo-box-height);
+        }
+
+        &__logo {
+            width: map-get(map-get($footer-sizes, ecran), logo-width);
+            height: map-get(map-get($footer-sizes, ecran), logo-height);
+        }
+
+        &__item {
+            font-size: map-get(map-get($footer-sizes, ecran), item-font-size);
+        }
+
+        &__item-icon {
+            font-size: map-get(map-get($footer-sizes, ecran), item-icon-font-size);
+
+            &--1 {
+                font-size: map-get(map-get($footer-sizes, ecran), item-icon-font-size-1);
+            }
+        }
+
+        &__link {
+            font-size: map-get(map-get($footer-sizes, ecran), link-font-size);
+        }
+    }
+}
+@media screen and (min-width: map-get(map-get($footer-sizes, ecran-xxl), resolution)) {
+    .footer {
+        padding: map-get(map-get($footer-sizes, ecran-xxl), footer-padding);
+
+        &__logo-box {
+            width: map-get(map-get($footer-sizes, ecran-xxl), logo-box-width);
+            height: map-get(map-get($footer-sizes, ecran-xxl), logo-box-height);
+        }
+
+        &__logo {
+            width: map-get(map-get($footer-sizes, ecran-xxl), logo-width);
+            height: map-get(map-get($footer-sizes, ecran-xxl), logo-height);
+        }
+
+        &__item {
+            font-size: map-get(map-get($footer-sizes, ecran-xxl), item-font-size);
+        }
+
+        &__item-icon {
+            font-size: map-get(map-get($footer-sizes, ecran-xxl), item-icon-font-size);
+
+            &--1 {
+                font-size: map-get(map-get($footer-sizes, ecran-xxl), item-icon-font-size-1);
+            }
+        }
+
+        &__link {
+            font-size: map-get(map-get($footer-sizes, ecran-xxl), link-font-size);
+        }
     }
 }

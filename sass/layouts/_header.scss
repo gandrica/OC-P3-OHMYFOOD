@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    height: 6.2rem;
+    height: map-get(map-get($header-sizes, mobile), height);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,16 +8,16 @@
     z-index: 100;
 }
 
-.logo{
+.logo {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: -.6rem;
 
-    &__img{
-        width: 16rem;
-        height: 5rem;
+    &__img {
+        width: map-get(map-get($header-sizes, mobile), img-width);
+        height: map-get(map-get($header-sizes, mobile), img-height);
     }
 }
 
@@ -37,4 +37,40 @@
         color: $color-black;
         font-size: 1.6rem;
     }
+}
+@media screen and (min-width: map-get($breakpoints, mobile)) {
+    .header {
+            height: map-get(map-get($header-sizes, tablette), height);
+        }
+    
+        .logo {  
+            &__img {
+                width: map-get(map-get($header-sizes, tablette), img-width);
+                height: map-get(map-get($header-sizes, tablette), img-height);
+            }
+        }
+}
+@media screen and (min-width: map-get($breakpoints, tablette)) {
+    .header {
+            height: map-get(map-get($header-sizes, ecran), height);
+        }
+    
+        .logo {
+            &__img {
+                width: map-get(map-get($header-sizes, ecran), img-width);
+                height: map-get(map-get($header-sizes, ecran), img-height);
+            }
+        }
+}
+@media screen and (min-width: map-get($breakpoints, ecran)) {
+    .header {
+            height: map-get(map-get($header-sizes, ecran-xxl), height);
+        }
+    
+        .logo {
+            &__img {
+                width: map-get(map-get($header-sizes, ecran-xxl), img-width);
+                height: map-get(map-get($header-sizes, ecran-xxl), img-height);
+            }
+        }
 }

@@ -1,10 +1,11 @@
-.top-section{
-    width: 100%;
-    @include center-element;
-    flex-direction: column;
-    background-color: $color-secondary-light;
-    z-index: 1;
-}
+
+.top-section {
+        width: 100%;
+        @include center-element;
+        flex-direction: column;
+        background-color: $color-secondary-light;
+        z-index: 1;
+    }
 
 .location {
     width: 100%;
@@ -12,34 +13,34 @@
     @include center-element;
     color: $color-black;
     background: linear-gradient(rgba(0, 0, 0, 0.05),
-                rgba(0, 0, 0, 0.05));
+            rgba(0, 0, 0, 0.05));
     padding-right: 3.8rem;
 
-    &__icon{
+    &__icon {
         margin-right: 1.2rem;
         font-size: 1.5rem;
     }
 
-    &__text{
+    &__text {
         font-size: 1.5rem;
         font-weight: bold;
     }
 }
 
-.exploration-box{
+.exploration-box {
     width: 80%;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     @include center-element;
     flex-direction: column;
     padding: 3.4rem 2rem 4rem 2rem;
 
-    &__heading{
+    &__heading {
         text-align: center;
         margin-bottom: 1rem;
     }
 
-    &__text{
+    &__text {
         font-size: 1.5rem;
         color: $color-grey-dark-1;
         margin-bottom: 2.4rem;
@@ -51,14 +52,14 @@
     width: 100%;
     padding: 4rem 2rem;
 
-    &__list{
+    &__list {
         list-style: none;
         margin-top: 2rem;
         @include center-element;
         flex-direction: column;
     }
 
-    &__item{
+    &__item {
         width: 96%;
         height: 6rem;
         background-color: $color-secondary-light;
@@ -67,7 +68,7 @@
         @include center-element;
         justify-content: flex-start;
 
-        &:hover{
+        &:hover {
             background-color: $secondary-color-light-2;
         }
 
@@ -76,7 +77,7 @@
         }
     }
 
-    &__circle{
+    &__circle {
         width: 2.2rem;
         height: 2.2rem;
         border-radius: 50%;
@@ -87,13 +88,13 @@
         transform: translateX(-50%);
     }
 
-    &__icon{
+    &__icon {
         font-size: 1.6rem;
         color: $color-grey-dark-1;
         margin-left: 1rem;
     }
 
-    &__text{
+    &__text {
         font-size: 1.5rem;
         color: $color-black;
         font-weight: 900;
@@ -101,14 +102,14 @@
     }
 }
 
-.restaurants{
+.restaurants {
     width: 100%;
     padding: 4rem 2rem;
     background-color: $color-secondary-light;
     @include center-element;
     flex-direction: column;
 
-    &__heading{
+    &__heading {
         align-self: flex-start;
         margin-bottom: 2rem;
     }
@@ -127,36 +128,36 @@
     overflow: hidden;
     border-radius: 1.4rem;
 
-    &-box{
+    &-box {
         width: 100%;
         height: 70%;
         overflow: hidden;
         position: relative;
 
-        &__image{
+        &__image {
             width: 100%;
             height: 100%;
             object-fit: cover;
             z-index: 10;
 
-            &--1{
+            &--1 {
                 object-position: right bottom;
             }
 
-            &--2{
+            &--2 {
                 object-position: center 62%;
             }
 
-            &--3{
+            &--3 {
                 object-position: 70% bottom;
                 transform: scale(1);
             }
 
-            &--4{
+            &--4 {
                 object-position: center bottom;
             }
 
-            &-text{
+            &-text {
                 position: absolute;
                 right: 1.2rem;
                 top: 1.2rem;
@@ -168,13 +169,15 @@
                 border-radius: .4rem;
                 z-index: 100;
 
-                &--3, &--4{
+                &--3,
+                &--4 {
                     display: none;
                 }
             }
         }
     }
-    &-caption{
+
+    &-caption {
         background-color: $color-white;
         width: 100%;
         height: 30%;
@@ -182,13 +185,13 @@
         grid-template-columns: 4% 78% 18%;
         grid-template-rows: repeat(4, 1fr);
 
-        &__heading{
+        &__heading {
             color: $color-black;
             grid-row: 2/3;
             grid-column: 2/3;
         }
 
-        &__text{
+        &__text {
             color: $color-black;
             font-size: 1.6rem;
             grid-row: 3/4;
@@ -197,16 +200,43 @@
 
         &__icon {
             font-size: 2.8rem;
-            transform: translateY(6px);
+            transform: translateY(.6rem);
             color: $color-black;
+            align-self: center;
+            justify-self: center;
             grid-row: 2/3;
             grid-column: 3/4;
-            transition: all 3s;
 
-            &:hover{
-                background-image: linear-gradient(to bottom right, $secondary-color, $primary-color);
+            &--solid{
+                background-image: linear-gradient(to right, $secondary-color, $primary-color);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                opacity: 0;
+                transition: all .4s ease-in-out;
+            }
+
+            &:hover.fa-solid {
+                animation: fadeIn .4s forwards;
+                transform: scale(1.1) translateY(.6rem);
             }
         }
     }
 }
 
+@media screen and (min-width: map-get($breakpoints, tablette)) {
+
+    .navigation {
+        width: 96%;
+
+        &__list {
+            flex-direction: row;
+            gap: 3.6rem;
+        }
+    }
+
+    .cards-list {
+        grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+        grid-template-rows: repeat(auto-fit, minmax(34rem, 36rem));
+    }
+}

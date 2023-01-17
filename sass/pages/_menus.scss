@@ -3,43 +3,48 @@ main {
     transition: all;
 }
 
-.th-section{
+.th-section {
     width: 100vw;
     z-index: 3;
 
-    &__img-box{
+    &__img-box {
         width: 100%;
         height: 36vh;
         overflow: hidden;
     }
 
-    &__img{
+    &__img {
         width: 100%;
-        height: 100;
+        // height: 100%;
         background-size: cover;
+        background-position: center;
+        
     }
 }
 
-.menu{
+.menu {
     background-color: $color-grey-light-1;
     border-radius: 3.6rem 3.6rem 0 0;
     padding: 2.6rem 4vw .6rem 4vw;
     transform: translateY(-3.6rem);
     z-index: 120;
 
-    &-name{
+    &-name {
         @include center-element;
         justify-content: space-between;
         margin-bottom: 2rem;
+        position: relative;
 
-        &__icon{
+        &__icon {
+            position: absolute;
             font-size: 2.2rem;
-            transform: translateX(-6vw);
+            top: .7rem;
+            right:2.8rem;
         }
     }
 }
 
-.item{
+.item {
     background-color: $color-white;
     margin-top: 1rem;
     margin-bottom: 1.4rem;
@@ -50,21 +55,43 @@ main {
     grid-template-columns: 3% 86% 11%;
     grid-template-rows: 2.4rem 2rem;
     box-shadow: 0 .3rem .5rem rgba(rgb(233, 233, 233), .8);
+    position: relative;
+    overflow: hidden;
 
-    &__list{
+    animation: fadeIn 1s .2s backwards;
+    
+    &:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+    
+    &:nth-child(2) {
+        animation-delay: 1s;
+    }
+
+    &:nth-child(3) {
+        animation-delay: 1.5s;
+    }
+
+    &:nth-child(4) {
+        animation-delay: 2s;
+    }
+
+    &__list {
         list-style: none;
         margin-bottom: 3.4rem;
     }
 
-    &__name{
-        grid-row:1/2;
+    &__name {
+        grid-row: 1/2;
         grid-column: 2/3;
+        overflow: hidden;
     }
 
     &__description {
         grid-row: 2/3;
         grid-column: 2/3;
         font-size: 1.2rem;
+        overflow: hidden;
     }
 
     &__price {
@@ -72,6 +99,58 @@ main {
         grid-column: 3/4;
         font-size: 1.2rem;
         font-weight: bold;
+        transition: all .6s;
+        transform: translateX(0);
+    }
+
+    &:hover &__validation {
+        cursor: pointer;
+        transition: all .6s;
+        transform: translateX(0);
+
+        &-icon {
+            transition: all .6s;
+            transform: rotate(0deg);
+        }
+    }
+
+    &:hover &__price {
+        transition: all .6s;
+        transform: translateX(-6rem);
+    }
+
+    &__validation {
+        position: absolute;
+        top:0;
+        right: 0;
+        @include center-element;
+        width: 6rem;
+        height: 100%;
+        background-color: $tertiary-color;
+        color: $tertiary-color;
+        font-size: 2rem;
+        transition: all .6s;
+        transform: translateX(6.2rem);
+
+        &-icon {
+            @include center-element;
+            width: 2.6rem;
+            height: 2.6rem;
+            background-color: $color-white;
+            border-radius: 50%;
+            transition: all .6s;
+            transform: rotate(-360deg);
+        }
     }
 }
-
+@media screen and (min-width: map-get($breakpoints, tablette)) {
+    .menu {
+        &__list{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            grid-gap: 3rem;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

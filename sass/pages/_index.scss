@@ -198,29 +198,29 @@
             grid-column: 2/3;
         }
 
-        &__icon {
-            font-size: 2.8rem;
-            transform: translateY(.6rem);
-            color: $color-black;
-            align-self: center;
-            justify-self: center;
-            grid-row: 2/3;
-            grid-column: 3/4;
+        // &__icon {
+        //     font-size: 2.8rem;
+        //     transform: translateY(.6rem);
+        //     color: $color-black;
+        //     align-self: center;
+        //     justify-self: center;
+        //     grid-row: 2/3;
+        //     grid-column: 3/4;
 
-            &--solid{
-                background-image: linear-gradient(to right, $secondary-color, $primary-color);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                opacity: 0;
-                transition: all .4s ease-in-out;
-            }
+        //     &--solid{
+        //         background-image: linear-gradient(to right, $secondary-color, $primary-color);
+        //         background-clip: text;
+        //         -webkit-background-clip: text;
+        //         color: transparent;
+        //         opacity: 0;
+        //         transition: all .3s ease-in-out;
+        //     }
 
-            &:hover.fa-solid {
-                animation: fadeIn .4s forwards;
-                transform: scale(1.1) translateY(.6rem);
-            }
-        }
+        //     &:hover.fa-solid {
+        //         animation: fadeIn .3s forwards;
+        //         transform: scale(1.1) translateY(.6rem);
+        //     }
+        // }
     }
 }
 

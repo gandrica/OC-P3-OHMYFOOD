@@ -53,7 +53,7 @@ main {
     padding-bottom: .2rem;
     display: grid;
     grid-template-columns: 3% 86% 11%;
-    grid-template-rows: 2.4rem 2rem;
+    grid-template-rows: 3rem 2.6rem;
     box-shadow: 0 .3rem .5rem rgba(rgb(233, 233, 233), .8);
     position: relative;
     overflow: hidden;
@@ -90,17 +90,27 @@ main {
     &__description {
         grid-row: 2/3;
         grid-column: 2/3;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        -webkit-box-orient: vertical;
     }
 
     &__price {
+        z-index: 15;
+        background-color: $color-white;
+        padding-left: 1rem;
+        padding-right: 1rem;
         grid-row: 2/3;
         grid-column: 3/4;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         font-weight: bold;
         transition: all .6s;
         transform: translateX(0);
+
     }
 
     &:hover &__validation {
@@ -116,7 +126,7 @@ main {
 
     &:hover &__price {
         transition: all .6s;
-        transform: translateX(-6rem);
+        transform: translateX(-7rem);
     }
 
     &__validation {

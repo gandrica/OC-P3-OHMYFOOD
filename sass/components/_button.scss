@@ -1,5 +1,5 @@
 .btn{
-    background-image: linear-gradient(to bottom right, $secondary-color, $primary-color);
+    background-image: $linear-gradient;
     border: none;
     border-radius: 2.4rem;
     color: $color-white;
@@ -10,6 +10,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    &:hover {
+        box-shadow: .2rem .4rem 1rem rgba(0,0,0, .3);
+        filter: brightness(120%);
+    }
 
     &--menu {
         display: flex;

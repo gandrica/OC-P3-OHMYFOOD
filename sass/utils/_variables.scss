@@ -4,6 +4,7 @@ $secondary-color: #FF79DA;
 
 $color-secondary-light: rgba(244, 244, 244, 0.8);
 $secondary-color-light-2: #fdedf9;
+$secondary-color-light-3: #feaa82;
 
 $tertiary-color: #99E2D0;
 
@@ -17,6 +18,8 @@ $color-grey-dark-1: rgb(94, 89, 89);
 $color-grey-light-1: rgb(246, 246, 246);
 
 $color-box-shadow: 0 .2rem .3rem rgba(#000, .8);
+
+$linear-gradient: linear-gradient(to bottom right, $secondary-color, $primary-color);
 
 $margin_5rem: .5rem;
 

@@ -1,0 +1,91 @@
+.loader {
+    @include center-element;
+    width: 40%;
+    height: 40%;
+    transform: translate(-2rem,-3rem);
+
+    &__container {
+        position: fixed;
+        z-index: 999;
+        top:0;
+        left: 0;
+        background-color: rgba(0,0,0, .85);
+        width: 100vw;
+        height: 100vh;
+        @include center-element;
+        animation: fadeOut 3s ease-in-out 1 forwards;
+        
+    }
+
+    & span {
+        border: 0;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        border-radius: 50%;
+        animation: spin 2s ease infinite;
+    }
+
+    & :first-child {
+        background-color: $primary-color;
+        animation-delay: -1.5s;
+    }
+
+    & :nth-child(2) {
+        background-color: $secondary-color;
+        animation-delay: -1s;
+    }
+
+    & :nth-child(3) {
+        background-color: $tertiary-color;
+        animation-delay: -.5s;
+    }
+
+    & :nth-child(4) {
+        background-color: $secondary-color-light-3;
+    }
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile)) {
+    .loader {
+        transform: translate(-4rem,-4rem);
+
+        & span {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}
+@media screen and (min-width: map-get($breakpoints, tablette)) {
+    .loader {
+        transform: translate(-5rem, -5rem);
+
+        & span {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+}
+@media screen and (min-width: map-get($breakpoints, ecran)) {
+    .loader {
+        transform: translate(-6rem, -6rem);
+
+        & span {
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+}
+@media screen and (min-width: map-get($breakpoints, ecran-xxl)) {
+    .loader {
+        transform: translate(-7rem, -7rem);
+
+        & span {
+            width: 7rem;
+            height: 7rem;
+        }
+    }
+}
+
+

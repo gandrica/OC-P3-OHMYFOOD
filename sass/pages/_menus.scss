@@ -18,7 +18,9 @@ main {
         // height: 100%;
         background-size: cover;
         background-position: center;
-        
+    }
+    &__main-title {
+        display: none;
     }
 }
 
@@ -90,7 +92,6 @@ main {
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 1;
-        line-clamp: 1;
         -webkit-box-orient: vertical;
     }
 
@@ -103,7 +104,6 @@ main {
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 1;
-        line-clamp: 1;
         -webkit-box-orient: vertical;
     }
 
